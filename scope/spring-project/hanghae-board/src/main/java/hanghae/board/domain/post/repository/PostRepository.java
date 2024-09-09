@@ -1,6 +1,6 @@
-package hanghae.board.repository;
+package hanghae.board.domain.post.repository;
 
-import hanghae.board.domain.entity.Post;
+import hanghae.board.domain.post.entity.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

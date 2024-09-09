@@ -1,6 +1,7 @@
-package hanghae.board.domain.entity;
+package hanghae.board.domain.post.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import hanghae.board.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;

@@ -1,8 +1,7 @@
-package hanghae.board.controller;
+package hanghae.board.domain.post.controller;
 
-import hanghae.board.domain.dto.PostDto;
-import hanghae.board.domain.entity.Post;
-import hanghae.board.service.PostService;
+import hanghae.board.domain.post.dto.PostDto;
+import hanghae.board.domain.post.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

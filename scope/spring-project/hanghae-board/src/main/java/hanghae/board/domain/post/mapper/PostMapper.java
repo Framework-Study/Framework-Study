@@ -1,7 +1,7 @@
-package hanghae.board.domain.mapper;
+package hanghae.board.domain.post.mapper;
 
-import hanghae.board.domain.dto.PostDto;
-import hanghae.board.domain.entity.Post;
+import hanghae.board.domain.post.dto.PostDto;
+import hanghae.board.domain.post.entity.Post;
 import org.springframework.stereotype.Component;
 
 @Component

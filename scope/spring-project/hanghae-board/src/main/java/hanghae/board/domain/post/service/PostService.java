@@ -1,8 +1,8 @@
-package hanghae.board.service;
+package hanghae.board.domain.post.service;
 
-import hanghae.board.domain.dto.PostDto;
-import hanghae.board.domain.mapper.PostMapper;
-import hanghae.board.repository.PostRepository;
+import hanghae.board.domain.post.dto.PostDto;
+import hanghae.board.domain.post.mapper.PostMapper;
+import hanghae.board.domain.post.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

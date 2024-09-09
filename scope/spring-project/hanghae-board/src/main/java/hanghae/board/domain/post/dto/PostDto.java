@@ -1,4 +1,4 @@
-package hanghae.board.domain.dto;
+package hanghae.board.domain.post.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
