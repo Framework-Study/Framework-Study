@@ -6,6 +6,7 @@ import hanghae.board.domain.user.entity.User;
 import hanghae.board.domain.user.entity.UserRoleEnum;
 import hanghae.board.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +19,7 @@ public class UserService {
     // TODO : ADMIN_TOKEN 환경 변수로 값을 주입 받을 수 있도록 변경 필요
     private static final String ADMIN_TOKEN = "AAABnvxRVklrnYxKZ0aHgTBcXukeZygoC";
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     // 회원가입 관련 서비스 로직 작성
     @Transactional
@@ -44,9 +46,10 @@ public class UserService {
         userRepository.save(User.builder()
                 .loginId(loginId)
                 .username(username)
-                .password(password)
+                .password(passwordEncoder.encode(password))
                 .role(role)
                 .build());
+
         return true;
     }
 }
