@@ -30,9 +30,9 @@ public class UserService {
         String password = signupRequestDto.getPassword();
 
         // 중복 유저 확인
-        Optional<User> found = userRepository.findByUsername(loginId);
+        Optional<User> found = userRepository.findByLoginId(loginId);
         if (found.isPresent()) {
-            throw new IllegalArgumentException("중복된 사용자가 존재합니다.");
+            throw new IllegalArgumentException("중복된 아이디가 존재합니다.");
         }
         // 관리자 권한 확인
         UserRoleEnum role = UserRoleEnum.USER;
@@ -42,7 +42,6 @@ public class UserService {
             }
             role = UserRoleEnum.ADMIN; // 관리자 권한 부여
         }
-        // TODO: 비밀번호 암호화
         userRepository.save(User.builder()
                 .loginId(loginId)
                 .username(username)
