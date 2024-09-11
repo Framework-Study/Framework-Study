@@ -2,6 +2,7 @@ package hanghae.board.domain.user.controller;
 
 import hanghae.board.domain.user.dto.SignupRequestDto;
 import hanghae.board.domain.user.service.UserService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +21,9 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/signup")
-    public ResponseEntity<Boolean> signup(@RequestBody SignupRequestDto signupRequestDto) {
+    public ResponseEntity<Boolean> signup(@RequestBody @Valid SignupRequestDto signupRequestDto) {
         boolean result = userService.signup(signupRequestDto);
         return ResponseEntity.ok(result);
     }
 }
+
